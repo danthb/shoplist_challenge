@@ -1,0 +1,89 @@
+.navbar{    
+    width: 100%;
+    height: 80px;
+    background-color: #171717;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    z-index: 50;
+
+}
+
+.navbar_logo h2{
+    color: #FA27A9;
+    font-size: 1.5rem;
+    cursor: pointer;
+}	
+
+.navbar_links{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar_links > li{
+    padding-left: 1rem;
+}
+
+.navbar_links > li > a{
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar_links > li > a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-items{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    color: #fff;
+}
+
+.links{
+    background: black;
+    padding: 10px;
+    border-radius: 8px
+}
+
+.links:hover{
+    background: #FA27A9;
+    color: #fff;
+}   
+
+.navbar_menu_hamburguer{
+    width: 30px;
+    height: 30px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar_menu_hamburguer > div{
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+
+.navbar_menu_hamburguer:hover{
+    background-color: #FA27A9;
+}
+
+@media (max-width: 768px){
+    .navbar_menu_hamburguer{
+        display: flex;
+    }
+    .navbar_links{
+        display: none;
+    }
+}
