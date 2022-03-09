@@ -1,19 +1,21 @@
 import './ProductsView.css'
-import {Fragment} from 'react';
-
+import Product from './Product';
 const ProductsView = () => {
     return (
-        <Fragment>
-        <div className="products-view">
-        <div className="products-view_container">
-            <h1>Catalog</h1>
-            <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            quia.
-            </p>
-        </div>
+        <div className="productsview">
+            <h1 className="productsview_title">
+            Products
+            </h1>
+            <div className="productsview_content">
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
             </div>
-     </Fragment>
+        </div>
+
     );
 }
 

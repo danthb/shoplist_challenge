@@ -1,21 +1,25 @@
 import './HomeView.css';
-import { Link } from 'react-router-dom';
 import { Fragment } from 'react';
+import Product from './Product';
 
 const HomeView = () => {
     return (
         <Fragment>
-            <div className="home-view">
-                <div className="home-view_container">
-                    <h1>Home</h1>
+            <div className="homeview">
+                <h2 className="homeview__title">Welcome to Zyrebox market</h2>
+                <div className="homeview__content">
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-
-                        Quisquam, quia.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Pellentesque euismod, urna eu tincidunt consectetur,
+                        nisi nisl aliquam nunc, eget egestas nunc nisl eu
+                        lectus.
                     </p>
-                    <Link to="/products">
-                        <button>Products</button>
-                    </Link>
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
 
                 </div>
             </div>

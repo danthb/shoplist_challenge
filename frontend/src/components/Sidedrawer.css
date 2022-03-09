@@ -51,20 +51,7 @@
     margin-left: 8px;
   }
   
-  .sidedrawer_cartbadge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    background-color: #171717;
-    border-radius: 50%;
-    margin-left: 8px;
-    color: #fff;
-    font-size: 1rem;
-  }
-  
-  .sidedrawer_links > li > a:hover .sidedrawer__cartbadge {
+  .sidedrawer_links > li > a:hover{
     background-color: #fff;
     color: #171717;
   }

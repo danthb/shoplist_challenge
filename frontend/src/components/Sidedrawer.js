@@ -23,6 +23,12 @@ const Sidedrawer = ({show, click}) => {
                 <li>
                     <Link to ="/" className="links">Home</Link>
                 </li>
+                <li>
+                    <Link to="/new_product" className="links">
+                        <span><i className="fas fa-plus"></i></span>
+                        New Product
+                    </Link>
+                </li>
 
            </ul>
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { HashRouter as Router, Link} from 'react-router-dom';
 import { Fragment } from 'react';
+import SearchBar from './SearchBar';
 
 import './Navbar.css'
 
@@ -15,6 +16,9 @@ const Navbar = ({click}) => {
                     {/* Links */}  
                 <ul className="navbar_links">
                     <li>
+                        <SearchBar />
+                    </li>
+                    <li>
                         <Link to ="/" className="links">Home</Link>
                     </li>
                     <li>
@@ -24,6 +28,13 @@ const Navbar = ({click}) => {
                         </Link>
                         
                     </li>
+                    <li>
+                        <Link to="/new_product" className="links">
+                            <span><i className="fas fa-plus"></i></span>
+                            New Product
+                        </Link>
+                    </li>
+
                 </ul>
       
             <div className="navbar_menu_hamburguer" onClick={click}>
