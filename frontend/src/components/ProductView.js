@@ -1,5 +1,5 @@
 import './ProductView.css'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 
 
 
@@ -22,37 +22,35 @@ const ProductView = () => {
         <div className="productview__right">
                 <div className="right__info">
                 <form>
-                        <div className={isEditable?"form_input":"form_input_n"}>
+                        <div className={"form_input"}>
                             <label htmlFor="name">Name</label>
                             <input
                                 type="text"
                                 id="name"
-                                value="Product Name"
-                                disabled={!isEditable}
+                                placeholder="Product Name"
                             />
 
                         </div>
-                        <div className={isEditable?"form_input":"form_input_n"}>
+                        <div className={"form_input"}>
                             <label htmlFor="description">Description</label>
                             <input
                                 type="text"
                                 id="description"
-                                value="Here the description"
-                                disabled={!isEditable}
+                                placeholder="Description"
                             />
                         </div>  
-                        <div className={isEditable?"form_input":"form_input_n"}>
+                        <div className={"form_input"}>
                             <label htmlFor="price">Price</label>
                             <input
-                                type="text"
+                                type="number"
                                 id="price"
-                                value="$300"
-                                disabled={!isEditable}
+                                placeholder="$"
+
                             />
                         
                         </div>
-                        <div className="form_input">
-                            <button type="submit">
+                        <div className="form_input_button">
+                            <button type="submit" onClick={handle}>
                                Save
                             </button>
                         </div>

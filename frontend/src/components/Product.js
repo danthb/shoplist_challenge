@@ -15,10 +15,15 @@ const Product = () => {
             </p>
             <p className="info__price">
                 $100
-            </p>
+              </p>
+              <div className= "content__button">
               <Link to={`/product/${1}`} className="info__button">
-                  View/Edit Product
+                  View/Edit
               </Link>
+              <Link to={`/product/${1}`} className="info__button">
+                  Delete
+              </Link>
+              </div>
               
         </div>      
       </div>

@@ -19,6 +19,7 @@
 .info__name{
     font-size: 1rem;
     overflow: hidden;
+    margin: 8px;
 }
 
 .info__description{
@@ -28,9 +29,16 @@
     font-weight: bold;
 }
 
+.content__button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .info__button{
     display: block;
     width: 100%;
+    margin: 3px auto;
     text-decoration: none;
     text-align: center;
     color: #171717; 
@@ -38,6 +46,7 @@
     padding: 8px 16px;   
     border: 1px solid #171717;
     font-size: 1rem;
+    border-radius: 8px;
 }
 
 .info__button:hover{
