@@ -11,14 +11,54 @@ const getAllProducts = async (req, res) => {
 
 const getProductById = async (req, res) => {
     try {
-        const product = await Product.findById((req.params.id));
+        const { _id} = req.query;
+        const product = await Product.findById(_id);
         res.json(product);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 }
 
+
+const createProduct = async (req, res) => {
+    try {
+        const product = await Product.findOne({ name: req.body.name });
+        if (product) {
+            return res.status(400).json({ message: 'Product already exists' });
+        }
+        const newProduct = new Product({
+            name: req.body.name,
+            price: req.body.price,
+            description: req.body.description,
+            imageUrl: req.body.imageUrl,
+        });
+        await newProduct.save();
+        res.status(201).json(newProduct);
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+}
+
+const updateProduct = async (req, res) => {
+    const { _id, name, price, description, imageUrl } = req.body;
+    
+    try {
+        const product = await Product.findOne({ _id })
+        if (product) {
+            await product.update({ name, price, description, imageUrl });
+            res.status(200).send('ok')
+        } else {
+            res.status(404).send('not found')
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
 module.exports = {
     getAllProducts,
-    getProductById
+    getProductById,
+    createProduct,
+    updateProduct
 }
