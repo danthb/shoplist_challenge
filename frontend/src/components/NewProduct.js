@@ -32,7 +32,6 @@ const NewProduct = () => {
                     <form onSubmit={
                         ()=>handle()}
                     >
-                            
                         <div className="form_input">
                             <label htmlFor="name">Name</label>
                             <input type="text" id="name" />
