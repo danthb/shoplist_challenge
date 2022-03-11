@@ -13,9 +13,9 @@ const NewProduct = () => {
 
     const handle = async() => {
         const product = await accountAPI.createProduct({ 
-            name: window.document.getElementById('name').value,
-            description: window.document.getElementById('description').value,
-            price: window.document.getElementById('price').value,
+            name: document.getElementById('name').value,
+            description: document.getElementById('description').value,
+            price: document.getElementById('price').value,
             imageUrl: 'http://placeimg.com/640/480/food'
         })
         setProduct(product)
@@ -30,7 +30,7 @@ const NewProduct = () => {
             <div className="newproduct_content">
                 <div className="newproduct_form">
                     <form onSubmit={
-                        handle()}
+                        ()=>handle()}
                     >
                             
                         <div className="form_input">
