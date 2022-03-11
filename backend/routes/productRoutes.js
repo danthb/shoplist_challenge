@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const {getAllProducts, getProductById, createProduct, updateProduct} = require('../controllers/productController');
+const {getAllProducts, getProductById, createProduct, updateProduct, deleteProduct} = require('../controllers/productController');
 
 //@description: GET all products 
 //@route           GET /api/products
@@ -12,12 +12,16 @@ router.get('/', getAllProducts);
 //@route           GET /api/products/product?_id=
 router.get('/product', getProductById);
 
-//@description: GET Aa product by id
-//@route           GET /api/product/create
+//@description: POST Aa product by id
+//@route           POST /api/product/create
 router.post('/create', createProduct);
 
-//@description: GET Aa product by id
-//@route           GET /api/product/update
+//@description: PUT Aa product by id
+//@route           PUT /api/product/update
 router.put('/update', updateProduct);
+
+//@description: DELETE Aa product by id
+//@route           DELETE /api/product/delete
+router.delete('/delete', deleteProduct);
 
 module.exports = router;

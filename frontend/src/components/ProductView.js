@@ -40,7 +40,7 @@ const ProductView = () => {
                         {product.description}
                     </div>
                     <div className="info__price">
-                        $ {product.price}
+                        {'$'} {product.price}
                     </div>
                 
                 </div>

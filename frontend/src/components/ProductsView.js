@@ -26,7 +26,7 @@ const ProductsView = () => {
                 {
                     Object.keys(products).map(key => {
                         console.log(products[key])
-                        return <Product key={key} product={products[key]} />
+                        return <Product key={key} product={products[key]} delete={ false}/>
                     })
                 }
             </div>
