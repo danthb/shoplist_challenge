@@ -17,6 +17,10 @@ const productShema = new mongoose.Schema({
     imageUrl: {
         type: String,
         required: false,
+    },
+    fav: {
+        type: Boolean,
+        required: false,
     }
 })
 

@@ -6,7 +6,8 @@ for( i = 0; i < 10; i++) {
         name: faker.commerce.productName(),
         description: faker.lorem.sentence(),
         price: faker.commerce.price(),
-        imageUrl: faker.image.food()
+        imageUrl: faker.image.food(),
+        fav: faker.random.boolean()
     })
 }
 

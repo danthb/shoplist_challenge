@@ -1,7 +1,27 @@
 import './NewProduct.css';
-import React from 'react';
+import React from 'react'
+import { accountAPI } from '../services/index'
 
 const NewProduct = () => {
+    const [product, setProduct] = React.useState({
+        name: '',
+        description: '',
+        price: '',
+        imageUrl: '',
+        fav: false
+    });
+
+    const handle = async() => {
+        const product = await accountAPI.createProduct({ 
+            name: window.document.getElementById('name').value,
+            description: window.document.getElementById('description').value,
+            price: window.document.getElementById('price').value,
+            imageUrl: 'http://placeimg.com/640/480/food'
+        })
+        setProduct(product)
+        window.alert('Product Created')
+    }
+    
     return(
         <div className="newproduct">
             <h1 className="newproduct_title">
@@ -9,7 +29,10 @@ const NewProduct = () => {
             </h1>
             <div className="newproduct_content">
                 <div className="newproduct_form">
-                    <form>
+                    <form onSubmit={
+                        handle()}
+                    >
+                            
                         <div className="form_input">
                             <label htmlFor="name">Name</label>
                             <input type="text" id="name" />
@@ -30,7 +53,7 @@ const NewProduct = () => {
                             </div>
                         </div>
                         <div className="form_input">
-                            <button type="submit">
+                            <button type="submit" >
                                 Add Product
                             </button>
                         </div>

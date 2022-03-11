@@ -21,12 +21,8 @@ const ProductsView = () => {
             </h1>
             <div className="productsview_content">
                 {
-                    console.log(typeof products)
-                }
-                {
                     Object.keys(products).map(key => {
-                        console.log(products[key])
-                        return <Product key={key} product={products[key]} delete={ false}/>
+                        return <Product key={key} product={products[key]}/>
                     })
                 }
             </div>
