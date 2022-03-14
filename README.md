@@ -1,7 +1,8 @@
 # SHOPLIST
+
 ## FullStack App with MERN
 
-Shoplist is a fullstack application developed with MERN 
+Shoplist is a fullstack application developed with MERN
 
 - Mongo
 - Express
@@ -11,24 +12,24 @@ Shoplist is a fullstack application developed with MERN
 ## Features
 
 - NoSQL Database
-- Mongoose 
-- Just CSS 
+- Mongoose
+- Just CSS
 - FakerJS
-
 
 Shoplist is a lightweight application where you can operate CRUD actions.
 
 > The main objective of shoplist is to explore
 > the whole MERN stack and practice the CRUD.
 
-
 ## Installation
 
 Shoplist requires [Node.js](https://nodejs.org/) v14+ to run.
-First, clone the repository
+First, clone the repository in your local machine.
+
 ```sh
 git clone hhttps://github.com/danthb/shoplist_challenge.git
 ```
+
 Install the dependencies.
 
 ```sh
@@ -39,15 +40,19 @@ npm install
 ```
 
 Run the app from the root folder
+
 ```sh
 cd shoplist
 npm run dev
 ```
+
 Populate data
+
 ```sh
 cd shoplist
 npm run data:populate
 ```
+
 ## License
 
 MIT License
